@@ -261,9 +261,7 @@ v2-optimized/
 
 ## 📄 **Documentation**
 
-- **[ACTUAL_PRODUCT_DOCUMENTATION.md](./ACTUAL_PRODUCT_DOCUMENTATION.md)** - Complete technical overview
-- **[SESSION_NOTES.md](./SESSION_NOTES.md)** - Development session insights
-- **[MODE_BASED_IMPLEMENTATION_DOCUMENTATION.md](./MODE_BASED_IMPLEMENTATION_DOCUMENTATION.md)** - Architecture details
+- **[ACTUAL_PRODUCT_DOCUMENTATION.md](./ACTUAL_PRODUCT_DOCUMENTATION.md)** - Complete technical overview and development details
 
 ---
 
