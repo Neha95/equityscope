@@ -21,11 +21,12 @@ EquityScope v2-Optimized is a comprehensive financial analysis platform with sop
 - **Blended Multiples** (`blended_multiples_service.py`) - Weighted sector-based multiples
 
 #### **2. Comprehensive Financial Analysis**
-- **Financial Statements Service** (`financial_statements_service.py`) - 5-year historical statement analysis
-- **Technical Analysis Service** (`technical_analysis.py`) - RSI, Bollinger Bands, Support/Resistance
-- **News & Sentiment Analysis** (`news_scraper.py`) - Real-time news sentiment scoring
-- **Corporate Governance Analysis** (`corporate_governance_service.py`) - ESG and governance metrics
-- **Peer Comparison Service** (`peer_comparison_service.py`) - Industry benchmarking
+- **Financial Statements Service** (`financial_statements_service.py`) - 5-year historical statement analysis with YoY changes
+- **Technical Analysis Service** (`technical_analysis.py`) - 15+ indicators: RSI, MACD, Bollinger Bands, Stochastic, ADX, ATR, Williams %R, OBV, CCI, Support/Resistance levels
+- **News & Sentiment Analysis** (`news_scraper.py`) - Real-time news sentiment scoring with market impact assessment
+- **Corporate Governance Analysis** (`corporate_governance_service.py`) - Promoter holdings, pledging patterns, dividend consistency, ESG scoring
+- **Peer Comparison Service** (`peer_comparison_service.py`) - Sector-specific benchmarking with valuation percentiles and relative positioning
+- **Financial Health Scoring** - Multi-dimensional health metrics including liquidity, solvency, efficiency, and profitability ratios
 
 #### **3. AI-Powered Intelligence**
 - **Optimized AI Service** (`optimized_ai_service.py`) - 2-agent architecture for cost efficiency
@@ -34,11 +35,12 @@ EquityScope v2-Optimized is a comprehensive financial analysis platform with sop
 - **Agentic Workflow** (`agentic_workflow.py`) - Multi-agent investment committee analysis
 
 #### **4. Advanced Data & Analytics**
-- **Intelligent Caching System** (`intelligent_cache.py`) - Multi-tier caching for performance
-- **Dynamic Sector Classification** (`dynamic_sector_classification_service.py`) - ML-based industry classification
-- **Sector Intelligence** (`sector_intelligence_service.py`) - Industry-specific insights
-- **Weighted Scoring** (`weighted_scoring_service.py`) - Multi-factor investment scoring
-- **Historical Validation** (`historical_validation.py`) - Backtesting and validation
+- **Intelligent Caching System** (`intelligent_cache.py`) - Multi-tier caching for performance optimization
+- **Dynamic Sector Classification** (`dynamic_sector_classification_service.py`) - ML-based industry classification with conglomerate detection
+- **Sector Intelligence** (`sector_intelligence_service.py`) - Industry-specific insights and benchmarking
+- **Weighted Scoring Framework** (`weighted_scoring_service.py`) - Backend implementation ready but not integrated in frontend portal
+- **Historical Validation** (`historical_validation.py`) - 5-year backtesting and trend reliability assessment
+- **Conglomerate Handling** - Multi-segment business analysis for diversified companies like Reliance, Tata Group
 
 #### **5. Production Infrastructure**
 - **User Management** (`user_service.py`) - Authentication, subscriptions, rate limiting
@@ -106,11 +108,12 @@ EquityScope v2-Optimized is a comprehensive financial analysis platform with sop
 - **Optimized Token Usage**: 10K tokens vs original 24K tokens (58% reduction)
 
 ### **Financial Analysis Depth**
-- **15+ Valuation Models**: DCF variants, DDM, Asset-based, Multiples
-- **Industry-Specific Logic**: Banking DDM, Tech DCF, REIT Asset models
-- **10-Year Multi-Stage Projections**: GDP blending, competitive convergence
-- **Real-Time Technical Analysis**: 20+ indicators with chart integration
-- **Comprehensive Financial Health**: 5-year historical trend analysis
+- **15+ Valuation Models**: DCF variants, DDM, Asset-based, P/E, EV/EBITDA, P/B, PEG multiples
+- **Industry-Specific Logic**: Banking DDM, Pharma DCF+EV/EBITDA hybrid, Real Estate NAV, IT generic DCF
+- **10-Year Multi-Stage Projections**: GDP convergence, competitive fade, through-cycle adjustments
+- **Exhaustive Technical Analysis**: RSI, MACD, Bollinger Bands, Stochastic, ADX, ATR, Williams %R, OBV, CCI, momentum indicators, volume analysis, support/resistance identification
+- **Comprehensive Financial Health Metrics**: Liquidity ratios (current, quick, cash), Solvency ratios (D/E, interest coverage, debt service), Efficiency ratios (asset turnover, inventory turnover, receivables turnover), Profitability ratios (ROE, ROA, ROIC, margins), 5-year trend analysis with YoY changes
+- **Conglomerate Analysis**: Multi-segment revenue breakdown, diversified business model valuation, segment-specific DCF for complex companies
 
 ### **AI & Intelligence Features**
 - **Multi-Agent Investment Committee**: Bull/Bear/Neutral perspectives
@@ -131,11 +134,13 @@ EquityScope v2-Optimized is a comprehensive financial analysis platform with sop
 ## 📊 **Real Performance Metrics**
 
 ### **Analysis Capabilities (Actually Implemented)**
-- **Response Time**: <30 seconds for complete analysis
-- **Cost Per Analysis**: $0.30 (vs industry standard $2-5)
-- **Data Coverage**: 4000+ NSE/BSE listed companies
-- **Analysis Depth**: 15+ financial models, 20+ technical indicators
-- **Educational Content**: 66+ progressive disclosure items
+- **Response Time**: <30 seconds for complete analysis including DCF, technical analysis, and peer comparison
+- **Cost Per Analysis**: $0.30 (vs industry standard $2-5) through 2-agent AI optimization
+- **Data Coverage**: 4000+ NSE/BSE listed companies with automatic sector classification
+- **Analysis Depth**: 15+ financial models, 15+ technical indicators (RSI, MACD, Bollinger, Stochastic, ADX, ATR, Williams %R, OBV, CCI), comprehensive financial health scoring
+- **Educational Content**: 66+ progressive disclosure items for financial literacy
+- **Conglomerate Support**: Multi-segment analysis for diversified companies (Reliance, Tata Group, etc.)
+- **Investment Scoring Framework**: Backend weighted scoring implementation available but not yet integrated in portal UI
 
 ### **Technical Architecture (Production-Ready)**
 - **Backend**: FastAPI with 40+ service modules

@@ -17,9 +17,9 @@ EquityScope v2-Optimized is a comprehensive financial analysis platform built as
 **Current Status**: Fully functional locally, not yet deployed for public use.
 
 ### 🌟 **Core Capabilities**
-- **🤖 Cost-Optimized AI Analysis**: 2-agent architecture reducing AI costs by 67%
+- **🤖 Cost-Optimized AI Analysis**: 2-agent architecture
 - **📊 Multi-Model Valuation**: DCF, DDM, Asset-based models with sector-specific logic
-- **📈 Advanced Technical Analysis**: 20+ indicators with real-time charting
+- **📈 Advanced Technical Analysis**: 15+ indicators (RSI, MACD, Bollinger Bands, Stochastic, ADX, ATR, Williams %R, OBV, CCI) with real-time charting
 - **📰 News Sentiment Integration**: Real-time sentiment analysis and scoring
 - **🏦 Sector Intelligence**: Banking, Pharma, IT, Real Estate specialized calculations
 - **💾 Intelligent Caching**: Multi-tier caching system optimizing performance and costs
@@ -164,16 +164,18 @@ REACT_APP_API_URL=http://localhost:8000
 - **Through-Cycle Adjustments**: Cyclicality detection and normalization
 - **GDP Fade-Down Logic**: 10-year projections converging to India GDP growth (3%)
 
-**Weighted Scoring Framework** (35% DCF, 25% Financial, 20% Technical, 20% Peer):
-- **DCF Component**: Industry-appropriate valuation models with confidence scoring
-- **Financial Health**: Profitability, growth efficiency, balance sheet strength
-- **Technical Signals**: RSI, Bollinger Bands, support/resistance levels
-- **Peer Comparison**: Sector-filtered benchmarking (auto-classified by ticker)
-
 **Sector Classification & Fallbacks**:
 - **60+ Indian Stocks**: Auto-classified across BFSI, Pharma, Real Estate, IT, FMCG, Energy
-- **Fallback Logic**: Unknown tickers default to IT sector with generic DCF
+- **IT Default Rationale**: Unknown tickers default to IT sector because it uses generic DCF model, which is the most stable and broadly applicable valuation method across different business models
 - **Data Quality Handling**: Confidence scoring based on data completeness
+
+**Financial Analysis Components**:
+- **5-Year Financial Statements**: Income statement, balance sheet, cash flow analysis with YoY changes and trend analysis
+- **Financial Health Metrics**: Comprehensive ratio analysis including liquidity (current, quick, cash ratios), solvency (debt-to-equity, interest coverage, debt service ratios), efficiency (asset turnover, inventory turnover, receivables turnover), and profitability metrics (ROE, ROA, ROIC, margin analysis)
+- **Corporate Governance**: Promoter holdings, pledging patterns, dividend consistency scoring, ESG factors
+- **Peer Comparison**: Sector-specific benchmarking with valuation percentiles and relative positioning across 60+ Indian companies
+- **News Sentiment Analysis**: Real-time sentiment scoring integrated with market impact assessment and news trend analysis
+- **Conglomerate Analysis**: Multi-segment business analysis for diversified companies like Reliance, Tata Group with segment-specific valuation approaches
 
 ### **AI Mode (Agentic Analysis)**
 **Data Sources**: Yahoo Finance + Claude AI (Anthropic) + News APIs
@@ -181,9 +183,13 @@ REACT_APP_API_URL=http://localhost:8000
 **Key Features**:
 - **Analysis Engine (8K tokens)**: Consolidated financial analysis with market insights
 - **DCF Validator (2K tokens)**: AI-enhanced assumption validation and feedback
-- **News Sentiment Integration**: Real-time sentiment scoring and market impact analysis
-- **Management Guidance**: Earnings call insights and forward-looking statements
-- **Multi-Scenario Modeling**: Bull/Base/Bear perspectives with reasoning
+- **News Sentiment Integration**: Real-time sentiment scoring integrated into overall analysis
+- **Enhanced Interpretation**: AI-powered plain English explanations of financial metrics
+
+**Future Enhancements** (Not Yet Implemented):
+- Management guidance extraction from earnings calls
+- Integration with Kite APIs, Perplexity for better quality & consistent data
+- Company annual report analysis integration
 
 **AI Cost Optimization**:
 - **Target Cost**: ~$0.30 per analysis (67% reduction from original 4-agent system)
@@ -214,9 +220,9 @@ Stage 4 (Years 9-10): 3% growth (GDP convergence, high confidence)
 ```
 
 ### **Technical Analysis Integration**
-**Real-Time Indicators**: RSI, Bollinger Bands, Moving Averages, Support/Resistance
-**Chart Integration**: Lightweight Charts library with live NSE price feeds
-**Scoring Logic**: Technical momentum feeds into 20% weight of overall investment score
+**15+ Technical Indicators**: RSI, MACD, Bollinger Bands, Stochastic Oscillator, ADX (trend strength), ATR (volatility), Williams %R (momentum), On-Balance Volume (OBV), Commodity Channel Index (CCI), Simple/Exponential Moving Averages, Support/Resistance levels
+**Chart Integration**: Lightweight Charts library with live NSE price feeds and interactive technical analysis
+**Volume Analysis**: Volume trend analysis, volume-price correlation, OBV momentum indicators
 
 ---
 
@@ -312,7 +318,7 @@ v2-optimized/
 ## 🚀 **Future Possibilities**
 
 While this is currently a personal project, the architecture supports:
-- **Real-time data integration** (Kite API, premium feeds)
+- **Premium data integration** (Kite API, Perplexity)
 - **Portfolio tracking** capabilities
 - **Additional markets** (US, European stocks)
 - **Mobile applications** (React Native potential)
