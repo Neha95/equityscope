@@ -152,27 +152,71 @@ REACT_APP_API_URL=http://localhost:8000
 
 ---
 
-## 📊 **Current Features & Capabilities**
+## 📊 **Analysis Modes & Capabilities**
 
-### **Financial Analysis Depth**
-- **15+ Valuation Models**: DCF variants, DDM, Asset-based, Multiples
-- **Industry-Specific Logic**: Banking DDM, Tech DCF, REIT Asset models
-- **10-Year Multi-Stage Projections**: GDP blending, competitive convergence
-- **Real-Time Technical Analysis**: 20+ indicators with chart integration
-- **Comprehensive Financial Health**: 5-year historical trend analysis
+### **Simple Mode (Rule-Based Analysis)**
+**Data Sources**: Yahoo Finance API for Indian market data (NSE/BSE)
+**Method**: Quantitative rules and historical validation - NO AI inference
+**Key Features**:
+- **Sector-Specific DCF Models**: Banking (DDM), Pharma (DCF+EV/EBITDA), Real Estate (NAV)
+- **Historical Validation**: 5-year quarterly CAGR analysis with trend reliability scoring
+- **Multi-Period Growth Analysis**: 3yr, 5yr, 7yr growth patterns for realistic projections
+- **Through-Cycle Adjustments**: Cyclicality detection and normalization
+- **GDP Fade-Down Logic**: 10-year projections converging to India GDP growth (3%)
 
-### **AI & Intelligence Features**
-- **Multi-Agent Investment Committee**: Bull/Bear/Neutral perspectives
-- **Management Guidance Extraction**: Earnings call sentiment analysis
-- **Dynamic Risk Assessment**: Sector-specific risk adjustments
-- **News Sentiment Integration**: Real-time market sentiment scoring
-- **Educational AI**: Progressive disclosure with 66+ educational items
+**Weighted Scoring Framework** (35% DCF, 25% Financial, 20% Technical, 20% Peer):
+- **DCF Component**: Industry-appropriate valuation models with confidence scoring
+- **Financial Health**: Profitability, growth efficiency, balance sheet strength
+- **Technical Signals**: RSI, Bollinger Bands, support/resistance levels
+- **Peer Comparison**: Sector-filtered benchmarking (auto-classified by ticker)
 
-### **User Experience**
-- **Demo Mode**: Pre-built analyses for major Indian stocks
-- **Touch-Friendly Controls**: Mobile-optimized interface
-- **Progressive Disclosure**: Educational tooltips throughout
-- **Real-Time Updates**: Live DCF recalculation on assumption changes
+**Sector Classification & Fallbacks**:
+- **60+ Indian Stocks**: Auto-classified across BFSI, Pharma, Real Estate, IT, FMCG, Energy
+- **Fallback Logic**: Unknown tickers default to IT sector with generic DCF
+- **Data Quality Handling**: Confidence scoring based on data completeness
+
+### **AI Mode (Agentic Analysis)**
+**Data Sources**: Yahoo Finance + Claude AI (Anthropic) + News APIs
+**Method**: 2-agent AI architecture for cost optimization
+**Key Features**:
+- **Analysis Engine (8K tokens)**: Consolidated financial analysis with market insights
+- **DCF Validator (2K tokens)**: AI-enhanced assumption validation and feedback
+- **News Sentiment Integration**: Real-time sentiment scoring and market impact analysis
+- **Management Guidance**: Earnings call insights and forward-looking statements
+- **Multi-Scenario Modeling**: Bull/Base/Bear perspectives with reasoning
+
+**AI Cost Optimization**:
+- **Target Cost**: ~$0.30 per analysis (67% reduction from original 4-agent system)
+- **Token Efficiency**: 10K tokens vs original 24K tokens through focused prompting
+- **Intelligent Caching**: 6-hour cache for AI insights, 24-hour for financial data
+
+### **DCF Calculation Improvements Beyond Historical Data**
+
+**Enhanced Validation Logic**:
+- **Unit Detection**: Smart handling of Indian financial data (crores vs millions)
+- **Sector-Specific Rules**: Banking EBITDA margin caps, Pharma R&D requirements
+- **Realistic Range Checks**: WACC 8-16%, Terminal growth 2-4%, Revenue growth sector-appropriate
+- **Data Quality Scoring**: Minimum 12 quarterly data points, recency validation
+
+**Multi-Stage Growth Engine**:
+- **Years 1-2**: Company-specific historical CAGR with trend reliability assessment
+- **Years 3-5**: Industry fade with competitive convergence modeling  
+- **Years 6-8**: Market maturity with peer benchmarking
+- **Years 9-10**: GDP convergence (3%) with confidence weighting
+
+**Progressive Assumptions**:
+```python
+# Example: TCS growth stages
+Stage 1 (Years 1-2): 12% growth (5yr historical CAGR, high confidence)
+Stage 2 (Years 3-5): 9% growth (industry fade, medium confidence)  
+Stage 3 (Years 6-8): 6% growth (competitive convergence, medium confidence)
+Stage 4 (Years 9-10): 3% growth (GDP convergence, high confidence)
+```
+
+### **Technical Analysis Integration**
+**Real-Time Indicators**: RSI, Bollinger Bands, Moving Averages, Support/Resistance
+**Chart Integration**: Lightweight Charts library with live NSE price feeds
+**Scoring Logic**: Technical momentum feeds into 20% weight of overall investment score
 
 ---
 
